@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(12, 12, 12, 0.411);
+
+  height: 10rem;
+
+  margin-top: 2rem;
+  border-top: 3px solid #0070f3;
+
+  span {
+    font-weight: bold;
+  }
+}
