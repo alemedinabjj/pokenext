@@ -3,10 +3,11 @@ import styles from './Card.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FavoriteContext, UseFavorite } from '../../hooks/FavoriteContext'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 export const Card = ({ pokemon }) => {
-  const { addFavorite, removeFavorite } = useContext(FavoriteContext)
+  const { favorites, addFavorite, removeFavorite } = useContext(FavoriteContext)
+  const [isFavorite, setIsFavorite] = useState(true)
 
   return (
     <div className={styles.container}>
@@ -29,8 +30,12 @@ export const Card = ({ pokemon }) => {
             </Link>
           </div>
           <div className={styles.card__favorite}>
-            <button onClick={() => addFavorite(item)}>Favoritar</button>
-            <button onClick={() => removeFavorite(item)}>Remover</button>
+            <button style={{
+              display: isFavorite ? 'inline' : 'none'
+            }} onClick={() => addFavorite(item)}>Favoritar</button>
+            <button style={{
+              display: favorites.find(favorite => favorite.id === item.id) ? 'inline' : 'none'
+            }} onClick={() => removeFavorite(item)}>Remover</button>
           </div>
         </div>
       ))}

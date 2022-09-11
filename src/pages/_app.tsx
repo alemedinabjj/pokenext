@@ -6,11 +6,11 @@ import { UseFavorite } from '../hooks/FavoriteContext'
 function MyApp({ Component, pageProps }) {
   return (
     // eslint-disable-next-line react/no-children-prop
-    <Layout>
-      <UseFavorite>
+    <UseFavorite>
+      <Layout>
         <Component {...pageProps} />
-      </UseFavorite>
-    </Layout>
+      </Layout>
+    </UseFavorite>
   )
 }
 

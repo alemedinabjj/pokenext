@@ -17,7 +17,7 @@ export default function Favorites () {
 
   return (
     <div>
-      <h1>Favorites</h1>
+      <h1 style={{ textAlign: "center" }}>Favorites</h1>
       <Card pokemon={favorites} />
     </div>
   )
