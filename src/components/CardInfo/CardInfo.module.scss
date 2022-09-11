@@ -1,3 +1,26 @@
+.section {
+
+  padding-inline: 1.4rem;
+
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: #0070f3;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: #fff;
+      color: #0070f3;
+    }
+}
+
 .container {
 
   margin: 0 auto;
@@ -64,5 +87,8 @@
       font-weight: 400;
       margin: 10px 0;
     }
+  }
+
+  
   }
 }
