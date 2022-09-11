@@ -25,6 +25,7 @@ export async function getStaticProps() {
 export default function Home({ pokemons }) {
 
   const { favorites  } = useContext(FavoriteContext)
+  
 
   return (
     <>

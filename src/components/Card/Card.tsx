@@ -31,7 +31,7 @@ export const Card = ({ pokemon }) => {
           </div>
           <div className={styles.card__favorite}>
             <button style={{
-              display: isFavorite ? 'inline' : 'none'
+              display: favorites.find(favorite => favorite.id === item.id) ? 'none' : 'inline'
             }} onClick={() => addFavorite(item)}>Favoritar</button>
             <button style={{
               display: favorites.find(favorite => favorite.id === item.id) ? 'inline' : 'none'
