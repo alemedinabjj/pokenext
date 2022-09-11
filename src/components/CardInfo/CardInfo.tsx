@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
 import styles from './CardInfo.module.scss'
 
 export const CardInfo = ({ pokemon }) => {
@@ -7,7 +8,9 @@ export const CardInfo = ({ pokemon }) => {
       <div className={styles.container}>
         <div className={styles.card}>
           <div className={styles.card__image}>
-            <img
+            <Image
+              width={250}
+              height={250}
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
               alt={pokemon.name}
             />

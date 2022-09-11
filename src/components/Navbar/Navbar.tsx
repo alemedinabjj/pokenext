@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { api } from '../../services/api'
 import styles from './Navbar.module.scss'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 export const Navbar = () => {
 
@@ -26,7 +27,10 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <img src="/assets/pokeball.svg" alt="logo" />
+        <Image 
+          width={50}
+          height={50}
+        src="/assets/pokeball.svg" alt="logo" />
       </div>
       <div className={styles.search}>
         <input type="search" placeholder="Search" onChange={handleChange} />
