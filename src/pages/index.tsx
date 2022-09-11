@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Card } from '../components/Card/Card'
 import { api } from '../services/api'
 
-
 export async function getStaticProps() {
   const maxPokemons = 300
 
@@ -13,7 +12,6 @@ export async function getStaticProps() {
   pokemons.forEach((item, index) => {
     item.id = index + 1
   })
-  
 
   return {
     props: {
@@ -24,13 +22,12 @@ export async function getStaticProps() {
 }
 
 export default function Home({ pokemons }) {
-
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>PokeNext</h1>
-    <div>
-      <Card pokemon={pokemons} />
-    </div>
+      <h1 style={{ textAlign: 'center' }}>PokeNext</h1>
+      <div>
+        <Card pokemon={pokemons} />
+      </div>
     </>
   )
 }

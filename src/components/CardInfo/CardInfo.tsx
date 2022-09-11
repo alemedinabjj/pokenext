@@ -1,8 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
+import { useContext } from 'react'
+import { FavoriteContext } from '../../hooks/FavoriteContext'
 import styles from './CardInfo.module.scss'
 
 export const CardInfo = ({ pokemon }) => {
+
+  const { addFavorite, removeFavorite } = useContext(FavoriteContext)
+
   return (
     <div className={styles.section}>
       <div className={styles.container}>
@@ -45,6 +50,10 @@ export const CardInfo = ({ pokemon }) => {
             </p>
           </div>
         </div>
+        <div className={styles.card__favorite}>
+            <button onClick={() => addFavorite(pokemon)}>Favoritar</button>
+            <button onClick={() => removeFavorite(pokemon)}>Remover</button>
+          </div>
       </div>
       <button onClick={() => window.history.back()}>Back</button>
    

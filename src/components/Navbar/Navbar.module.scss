@@ -12,11 +12,21 @@
 
   border-bottom: #318ef8a6 2px solid;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
+
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 5rem;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
 
 
     img {
