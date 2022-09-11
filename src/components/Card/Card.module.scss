@@ -24,6 +24,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  &.favorite {
+    border: 1px solid #d4af37;
+    position: relative;
+
+    &::after {
+      content: "★";
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      font-size: 2rem;
+      color: #d4af37;
+    }
+  }
 
 
   cursor: pointer;

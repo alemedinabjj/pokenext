@@ -12,7 +12,13 @@ export const Card = ({ pokemon }) => {
   return (
     <div className={styles.container}>
       {pokemon.map(item => (
-        <div key={item.id} className={styles.card}>
+        <div
+          key={item.id}
+          className={`${styles.card}
+        ${
+          favorites.some(favorite => favorite.id === item.id) && styles.favorite
+        }`}
+        >
           <div className={styles.card__image}>
             <Image
               width={150}
@@ -30,12 +36,26 @@ export const Card = ({ pokemon }) => {
             </Link>
           </div>
           <div className={styles.card__favorite}>
-            <button style={{
-              display: favorites.find(favorite => favorite.id === item.id) ? 'none' : 'inline'
-            }} onClick={() => addFavorite(item)}>Favoritar</button>
-            <button style={{
-              display: favorites.find(favorite => favorite.id === item.id) ? 'inline' : 'none'
-            }} onClick={() => removeFavorite(item)}>Remover</button>
+            <button
+              style={{
+                display: favorites.find(favorite => favorite.id === item.id)
+                  ? 'none'
+                  : 'inline'
+              }}
+              onClick={() => addFavorite(item)}
+            >
+              Favoritar
+            </button>
+            <button
+              style={{
+                display: favorites.find(favorite => favorite.id === item.id)
+                  ? 'inline'
+                  : 'none'
+              }}
+              onClick={() => removeFavorite(item)}
+            >
+              Remover
+            </button>
           </div>
         </div>
       ))}

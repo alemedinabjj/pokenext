@@ -5,8 +5,7 @@ import { FavoriteContext } from '../../hooks/FavoriteContext'
 import styles from './CardInfo.module.scss'
 
 export const CardInfo = ({ pokemon }) => {
-
-  const { addFavorite, removeFavorite } = useContext(FavoriteContext)
+  const { favorites, addFavorite, removeFavorite } = useContext(FavoriteContext)
 
   return (
     <div className={styles.section}>
@@ -51,12 +50,29 @@ export const CardInfo = ({ pokemon }) => {
           </div>
         </div>
         <div className={styles.card__favorite}>
-            <button onClick={() => addFavorite(pokemon)}>Favoritar</button>
-            <button onClick={() => removeFavorite(pokemon)}>Remover</button>
-          </div>
+          <button
+            style={{
+              display: favorites.find(favorite => favorite.id === pokemon.id)
+                ? 'none'
+                : 'inline'
+            }}
+            onClick={() => addFavorite(pokemon)}
+          >
+            Favoritar
+          </button>
+          <button
+            style={{
+              display: favorites.find(favorite => favorite.id === pokemon.id)
+                ? 'inline'
+                : 'none'
+            }}
+            onClick={() => removeFavorite(pokemon)}
+          >
+            Remover
+          </button>
+        </div>
       </div>
       <button onClick={() => window.history.back()}>Back</button>
-   
     </div>
   )
 }

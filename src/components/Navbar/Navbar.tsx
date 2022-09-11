@@ -1,14 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { api } from '../../services/api'
 import styles from './Navbar.module.scss'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { FavoriteContext } from '../../hooks/FavoriteContext'
 
 export const Navbar = () => {
-  const { favorites } = useContext(FavoriteContext)
 
   const route = useRouter()
 

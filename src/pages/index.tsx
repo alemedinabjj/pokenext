@@ -29,7 +29,7 @@ export default function Home({ pokemons }) {
 
   return (
     <>
-      <h1 style={{ textAlign: 'center' }}>PokeNext</h1>
+      <h1 style={{ textAlign: 'center' }}>Pokemons</h1>
       {
         favorites.length > 0 && (
           <div style={{ textAlign: 'center' }}>
