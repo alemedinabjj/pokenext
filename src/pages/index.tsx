@@ -23,8 +23,11 @@ export async function getStaticProps() {
 export default function Home({ pokemons }) {
   
   return (
+    <>
+      <h1 style={{ textAlign: "center" }}>PokeNext</h1>
     <div>
       <Card pokemon={pokemons} />
     </div>
+    </>
   )
 }

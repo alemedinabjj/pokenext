@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <p>Logo</p>
+       <img src="/assets/pokeball.svg" alt="logo" />
       </div>
       <ul className={styles.links}>
         <Link href="/">

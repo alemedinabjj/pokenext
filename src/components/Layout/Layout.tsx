@@ -8,7 +8,7 @@ import styles from './Layout.module.scss'
 export const Layout = ({ children }) => {
   return (
     <>
-      <Head children={undefined}>
+      <Head>
         <title>PokeNext</title>
         <meta name="description" content="Pokedex Next.js" />
         <link rel="icon" href="/favicon.ico" />

@@ -5,7 +5,7 @@ import { Layout } from '../components/Layout/Layout'
 function MyApp({ Component, pageProps }) {
   return (
     // eslint-disable-next-line react/no-children-prop
-    <Layout children={undefined}>
+    <Layout>
       <Component {...pageProps} />
     </Layout>
   )

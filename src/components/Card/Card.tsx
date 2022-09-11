@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from './Card.module.scss'
+import Link from 'next/link'
 
 export const Card = ({ pokemon }) => {
 
@@ -15,6 +16,10 @@ export const Card = ({ pokemon }) => {
             <div className={styles.card__info}>
               <h2>{item.name[0].toUpperCase() + item.name.slice(1)}</h2>
               <p>#{item.id}</p>
+
+              <Link href={`/pokemons/${item.id}`}>
+                <button>More Info</button>
+              </Link>
             </div>
           </div>
         ))

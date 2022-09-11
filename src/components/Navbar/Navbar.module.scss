@@ -4,12 +4,26 @@
   align-items: center;
   padding: 1rem 1.2rem;
   margin-bottom: 2rem;
-  background: rgba(12, 12, 12, 0.411);
+  background: rgba(12, 12, 12, 0.904);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  border-bottom: #318ef8a6 2px solid;
 
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5rem;
+    margin-top: 1rem;
+
+    img {
+      width: 100px;
+      height: 100px;
+    
+    }
   }
 
   .links {
