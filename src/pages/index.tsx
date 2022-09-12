@@ -1,9 +1,10 @@
+import { GetStaticProps } from 'next'
 import { useContext, useState, useEffect, useCallback } from 'react'
 import { Card } from '../components/Card/Card'
 import { FavoriteContext } from '../hooks/FavoriteContext'
 import { api } from '../services/api'
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const maxPokemons = 50
 
   const res = await api.get(`?limit=${maxPokemons}`)
