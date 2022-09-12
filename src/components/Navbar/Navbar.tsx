@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import { useState } from 'react'
+import { SetStateAction, useState } from 'react'
 import { api } from '../../services/api'
 import styles from './Navbar.module.scss'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+
+
 
 export const Navbar = () => {
 
@@ -12,15 +14,22 @@ export const Navbar = () => {
 
   const [search, setSearch] = useState('')
 
-  const handleChange = e => {
+  const handleChange = (e) => {
+    e.target.value = e.target.value.toLowerCase()
     setSearch(e.target.value)
   }
 
-  const searchPokemon = async e => {
+  const searchPokemon = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     const response = await api.get(search)
     console.log(response)
-    route.push(`/pokemons/${response.data.id}`)
+    const pokemon = response.data
+    const data = {
+      id: pokemon.id,
+    }
+
+    route.push(`/pokemons/${data.id}`)
+    
   }
 
   return (
