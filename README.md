@@ -2,7 +2,7 @@
  Pokedex NextJs
 </h1>
   
-![Resultado final do projeto](https://github.com/alemedinabjj/pokenext/blob/main/src/assets/preview2.png)
+![Resultado final do projeto](https://github.com/alemedinabjj/pokenext/blob/main/public/assets/preview1.png)
 
 ## 📝 Descrição
 
