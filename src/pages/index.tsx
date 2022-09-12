@@ -23,6 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 export default function Home({ pokemons }) {
+  const [offset, setOffset] = useState(0)
 
   return (
     <>
