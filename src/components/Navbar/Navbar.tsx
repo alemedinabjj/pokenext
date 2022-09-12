@@ -26,10 +26,9 @@ export const Navbar = () => {
     const pokemon = response.data
     const data = {
       id: pokemon.id,
-      name: pokemon.name,
     }
 
-    route.push(`/pokemons/${data.name}`)
+    route.push(`/pokemons/${data.id}`)
     
   }
 

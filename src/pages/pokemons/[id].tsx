@@ -4,7 +4,7 @@ import { CardInfo } from '../../components/CardInfo/CardInfo'
 import { api } from '../../services/api'
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const maxPokemons = 300
+  const maxPokemons = 1000
 
   const res = await api.get(`?limit=${maxPokemons}`)
 
