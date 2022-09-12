@@ -7,7 +7,7 @@ import { useContext, useState } from 'react'
 
 export const Card = ({ pokemon }) => {
   const { favorites, addFavorite, removeFavorite } = useContext(FavoriteContext)
-  const [isFavorite, setIsFavorite] = useState(true)
+
 
   return (
     <div className={styles.container}>
@@ -59,6 +59,7 @@ export const Card = ({ pokemon }) => {
           </div>
         </div>
       ))}
+     
     </div>
   )
 }

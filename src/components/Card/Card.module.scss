@@ -42,7 +42,7 @@
 
   cursor: pointer;
 
-  &:hover,
+  &:hover:not(.favorite),
   &:focus,
   &:active {
     color: #0070f3;
