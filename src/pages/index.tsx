@@ -22,16 +22,10 @@ export async function getStaticProps() {
 }
 
 export default function Home({ pokemons }) {
-  const { favorites } = useContext(FavoriteContext)
 
   return (
     <>
       <h1 style={{ textAlign: 'center' }}>Pokemons</h1>
-      {favorites.length > 0 && (
-        <div style={{ textAlign: 'center' }}>
-          {favorites.length} pokemons favoritos
-        </div>
-      )}
       <div>
         <Card pokemon={pokemons} />
       </div>
